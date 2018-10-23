@@ -1,6 +1,5 @@
 package net.stickycode.prybar.pivot;
 
-
 public interface PrybarRuntime {
 
   boolean hasFailures();
