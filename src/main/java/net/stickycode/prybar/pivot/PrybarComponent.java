@@ -2,6 +2,7 @@ package net.stickycode.prybar.pivot;
 
 public interface PrybarComponent {
 
-  void wire(PrybarRuntime prybarPivot);
+  default void wire(PrybarRuntime prybarPivot) {
+  }
 
 }
