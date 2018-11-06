@@ -24,4 +24,19 @@ public class PrybarComponentDependency {
     return fieldType;
   }
 
+  public PrybarComponentDependency withTarget(Class<?> target) {
+    this.target = target;
+    return this;
+  }
+
+  public PrybarComponentDependency withFieldName(String value) {
+    this.fieldName = value;
+    return this;
+  }
+
+  public PrybarComponentDependency withFieldType(String value) {
+    this.fieldType = value;
+    return this;
+  }
+
 }
