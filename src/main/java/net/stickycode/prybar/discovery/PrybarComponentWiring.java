@@ -14,8 +14,13 @@ public class PrybarComponentWiring
     return dependencies.iterator();
   }
 
-  public void add(PrybarComponentDependency d) {
+  public PrybarComponentWiring add(PrybarComponentDependency d) {
     dependencies.add(d);
+    return this;
+  }
+
+  public boolean hasDependencies() {
+    return !dependencies.isEmpty();
   }
 
 }

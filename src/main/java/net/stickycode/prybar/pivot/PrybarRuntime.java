@@ -14,4 +14,6 @@ public interface PrybarRuntime {
 
   <T> T find(Class<T> type);
 
+  <T> T configuration(PrybarComponent component, Class<T> fieldType, String fieldName, Object defaultValue);
+
 }

@@ -6,6 +6,8 @@ public class PrybarComponentDefinition {
 
   private PrybarComponentWiring wiring = new PrybarComponentWiring();
 
+  private PrybarComponentConfiguration configuration = new PrybarComponentConfiguration();
+
   public PrybarComponentDefinition(String type) {
     this.type = type;
   }
@@ -24,6 +26,18 @@ public class PrybarComponentDefinition {
 
   public String getTypeReference() {
     return "L" + getTypePath() + ";";
+  }
+
+  public boolean hasWiring() {
+    return wiring.hasDependencies();
+  }
+
+  public boolean hasConfiguration() {
+    return configuration.hasConfiguration();
+  }
+
+  public PrybarComponentConfiguration getConfiguration() {
+    return configuration;
   }
 
 }
